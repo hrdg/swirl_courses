@@ -17,8 +17,8 @@
     Alternatively, a simple web search often yields the answer you're looking for.
 
 - Class: cmd_question
-  Output: In its simplest form, R can be used as an interactive calculator. Type
-    5 + 7 and press Enter.
+  Output: 在其最简单的形式中，R可以被用作一个交互式的计算器。类型 
+    5+7，然后按Enter键。
   CorrectAnswer: 5 + 7
   AnswerTests: omnitest(correctExpr='5 + 7')
   Hint: Type 5 + 7 and press Enter.
