@@ -7,7 +7,7 @@
   Version: 2.2.0
 
 - Class: text
-  Output: 'R'
+  Output: '在此课程，我们将测试R编程的一些基本组成部分'
     language.
 
 - Class: text
