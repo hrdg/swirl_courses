@@ -7,7 +7,7 @@
   Version: 2.2.0
 
 - Class: text
-  Output: R
+  Output: 'R'
     language.
 
 - Class: text
