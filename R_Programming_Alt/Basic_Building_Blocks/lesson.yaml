@@ -8,115 +8,114 @@
 
 - Class: text
   Output: '在此课程，我们将测试R编程的一些基本组成部分'
-    language.
 
 - Class: text
-  Output: If at any point you'd like more information on a particular topic related
-    to R, you can type help.start() at the prompt, which will open a menu of resources
-    (either within RStudio or your default web browser, depending on your setup).
-    Alternatively, a simple web search often yields the answer you're looking for.
+  Output: 如果在任何时候你想就有关特定主题的更多信息 
+    为R，则可以键入help.start（）在提示符下，这将打开资源的菜单 
+    （无论是在RStudio或您的默认浏览器，这取决于你的设置）。 
+    另外，一个简单的网络搜索往往会产生你想要的答案。
 
 - Class: cmd_question
-  Output: 在其最简单的形式中，R可以被用作一个交互式的计算器。类型 
+  Output: 在其最简单的形式中，R可以被用作一个交互式的计算器。请输入 
     5+7，然后按Enter键。
   CorrectAnswer: 5 + 7
   AnswerTests: omnitest(correctExpr='5 + 7')
   Hint: Type 5 + 7 and press Enter.
 
 - Class: text
-  Output: ř简单地打印12在默认情况下的结果。然而，R是一个编程 
-    语言，往往是因为我们使用的编程语言，而不是一个计算器 
-    是自动执行某些程序或避免不必要的重复。
+  Output: 在默认情况下,R简单地打印出12的结果。然而，R是一个编程 
+    语言，我们使用的编程语言而不是一个计算器的主要原因是它可以
+    自动执行某些程序或避免不必要的重复。
 
 - Class: text
-  Output: In this case, we may want to use our result from above in a second calculation.
-    Instead of retyping 5 + 7 every time we need it, we can just create a new variable
-    that stores the result.
+  Output: 在这种情况下，我们可能希望在第二计算使用我们的结果从以上。 
+    而不是重新输入5+7每当我们需要它的时候，我们就可以创建一个新的变量 
+    存储该结果。
 
 - Class: text
-  Output: 'The way you assign a value to a variable in R is by using the assignment
-    operator, which is just a ''less than'' symbol followed by a ''minus'' sign. It
-    looks like this: <-'
+  Output: 你分配一个值在研究一个变量的方法是使用分配 
+    运营商，这仅仅是一个'小于'符号后跟一个'减'的迹象。它 
+    看起来是这样的：<-
 
 - Class: text
-  Output: Think of the assignment operator as an arrow. You are assigning the value
-    on the right side of the arrow to the variable name on the left side of the arrow.
+  Output: 想想赋值运算符作为箭头。要赋的值 
+    右侧的箭头的变量名的箭头的左侧。
 
 - Class: cmd_question
-  Output: To assign the result of 5 + 7 to a new variable called x, you type x <-
-    5 + 7. This can be read as 'x gets 5 plus 7'. Give it a try now.
+  Output: 把5+7的结果赋值给一个名为x的新变量，请键入x< - 
+    5+7，这可以被理解为“X=5加7”。现在尝试一下吧。
   CorrectAnswer: x <- 5 + 7
   AnswerTests: any_of_exprs('x <- 5 + 7', 'x <- 7 + 5')
-  Hint: Type x <- 5 + 7. It's important to include a single space on each side of
-    the assignment operator, but do NOT put a space between the `<` and the `-` that
-    form the arrow.
+  Hint: x <- 5+7，为了便于阅读，<-两边各一个空格 
+    赋值运算符<-是个整体，在`<`和` - `中间不要有空格 
+
 
 - Class: text
-  Output: You'll notice that R did not print the result of 12 this time. When you
-    use the assignment operator, R assumes that you don't want to see the result immediately,
-    but rather that you intend to use the result for something else later on.
+  Output: 注意到R没有打印12这个结果。当你 
+    使用赋值运算符时，R假定您不希望马上看到结果， 
+    而是认为你打算以后再使用该结果。 
 
 - Class: cmd_question
-  Output: To view the contents of the variable x, just type x and press Enter. Try
-    it now.
+  Output: 要查看变量x的内容，只需键入x，然后按Enter键。 
+    现在尝试一下。 
   CorrectAnswer: x
   AnswerTests: omnitest(correctExpr='x')
-  Hint: Type x and press Enter. This will automatically print the value of x.
+  Hint: 输入x，然后按Enter键。这将自动打印x的值。 
 
 - Class: cmd_question
-  Output: Now, store the result of x - 3 in a new variable called y.
+  Output: 现在，在一个名为y新的变量里存储x-3 。
   CorrectAnswer: y <- x - 3
   AnswerTests: omnitest(correctExpr='y <- x - 3')
-  Hint: Type y <- x - 3 and press Enter. Whether you use x - 3 or x-3 is personal
-    preference, but it's good habit to include a space on either side of the assignment
-    operator.
+  Hint: Type y <- x - 3 然后按Enter键。无论你用x - 3或X-3都可以 
+    但在运算符两边输入空格是很好的习惯，
+    
 
 - Class: cmd_question
-  Output: What is the value of y? Type y to find out.
+  Output: 什么是y的值？键入y来一探究竟。 
   CorrectAnswer: 'y'
   AnswerTests: omnitest(correctExpr='y')
-  Hint: Type y and press Enter.
+  Hint: 键入y，然后按Enter键。 
 
 - Class: text
-  Output: Now, let's create a small collection of numbers called a vector. Any object
-    that contains data is called a data structure and numeric vectors are the simplest
-    type of data structure in R. In fact, even a single number is considered a vector
-    of length one.
+  Output: 现在，让我们创建一个小的数值集合即向量。任何 
+    包含数据的对象被称为数据结构，数值向量是R中最简单的 
+    数据结构.事实上，即使单个数值被认为是一个长度为一的 
+    向量。 
 
 - Class: cmd_question
-  Output: The easiest way to create a vector is with the c() function, which stands
-    for 'concatenate' or 'combine'. To create a vector containing the numbers 1.1,
-    9, and 3.14, type c(1.1, 9, 3.14). Try it now and store the result in a variable
-    called z.
+  Output: 最简单的方法是使用c（）函数创建一个向量，它
+    代表 为“串联”或“合并”。要创建一个包含数字1.1， 9，
+    和3.14的向量，输入c(1.1, 9, 3.14)。现在就来试试
+    把结果存储在变量 z。 
   CorrectAnswer: z <- c(1.1, 9, 3.14)
   AnswerTests: omnitest(correctExpr='z <- c(1.1, 9, 3.14)')
-  Hint: Inputting z <- c(1.1, 9, 3.14) will assign the vector (1.1, 9, 3.14) to a
-    new variable called z. Including single spaces after the commas in the vector
-    is not required, but helps make your code less cluttered and more readable.
+  Hint: 输入z <- c(1.1, 9, 3.14)将向量（1.1，9，3.14）赋给 
+    最新的变量z。向量中的逗号不是必需的，但使你的代码
+    更简洁，更具有可读性。 
 
 - Class: cmd_question
-  Output: Anytime you have questions about a particular function, you can access R's
-    built-in help files via the `?` command. For example, if you want more information
-    on the c() function, type ?c without the parentheses that normally follow a function
-    name. Give it a try.
+  Output: 如果想了解某个函数的使用方法，你可以通过`？`命令访问R内置的
+    帮助文件。例如，如果您想了解c()函数的更多信息
+    键入？c ，且不需要加一个函数括号，试试看吧。 
   CorrectAnswer: ?c
   AnswerTests: omnitest(correctExpr='?c')
-  Hint: Type ?c and press Enter. This will bring up the help file for the c() function.
+  Hint: 输入?c，然后按Enter键。这将打开c（）函数的帮助文件。 
+
 
 - Class: cmd_question
-  Output: Type z to view its contents. Notice that there are no commas separating
-    the values in the output.
+  Output: 输入z，以查看其内容。请注意在输出的值中
+    有没有逗号分隔。 
   CorrectAnswer: z
   AnswerTests: omnitest(correctExpr='z')
-  Hint: Type z and press Enter to view its contents.
+  Hint: 键入z，然后按Enter键。 
 
 - Class: cmd_question
-  Output: You can combine vectors to make a new vector. Create a new vector that contains
-    z, 555, then z again in that order. Don't assign this vector to a new variable,
-    so that we can just see the result immediately.
+  Output: 您可以将几个向量合并起来赋给一个新的向量。创建一个包含 z，555，z
+    的新的向量，不要把这个向量分配给一个新的变量， 
+    这样我们就可以马上看到结果。 
   CorrectAnswer: c(z, 555, z)
   AnswerTests: omnitest(correctExpr='c(z, 555, z)')
-  Hint: Type c(z, 555, z). Don't create a new variable. We just want to view the result.
+  Hint: 输入 c(z, 555, z). 不要创建一个新的变量。我们只是想查看结果。 
 
 - Class: cmd_question
   Output: 'Numeric vectors can be used in arithmetic expressions. Type the following
