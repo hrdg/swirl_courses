@@ -1,13 +1,13 @@
 - Class: meta
-  Course: R Programming
-  Lesson: Basic Building Blocks
-  Author: Nick Carchedi
+  Course: R编程基础
+  Lesson: R的基本构成
+  Author: Nick Carchedi, Eric Wong
   Type: Standard
-  Organization: JHU Biostat
+  Organization: GDUF
   Version: 2.2.0
 
 - Class: text
-  Output: '在此课程，我们将测试R编程的一些基本组成部分'
+  Output: '在此课程，我们将互动学习R编程的一些基本组成部分'
 
 - Class: text
   Output: 如果在任何时候你想就有关特定主题的更多信息 
