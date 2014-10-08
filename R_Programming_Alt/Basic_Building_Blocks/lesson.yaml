@@ -28,18 +28,18 @@
     自动执行某些程序或避免不必要的重复。
 
 - Class: text
-  Output: 在这种情况下，我们可能希望在第二计算使用我们的结果从以上。 
-    而不是重新输入5+7每当我们需要它的时候，我们就可以创建一个新的变量 
+  Output: 在这种情况下，我们可能希望在后继的计算中使用我们以上的结果，
+    而不是重新输入5+7，我们就可以创建一个新的变量 
     存储该结果。
 
 - Class: text
-  Output: 你分配一个值在研究一个变量的方法是使用分配 
-    运营商，这仅仅是一个'小于'符号后跟一个'减'的迹象。它 
+  Output: 你给一个变量赋予一个值的方法是使用赋值 
+    运算符，这仅仅是一个'小于'符号后跟一个'减'。它 
     看起来是这样的：<-
 
 - Class: text
-  Output: 想想赋值运算符作为箭头。要赋的值 
-    右侧的箭头的变量名的箭头的左侧。
+  Output: 赋值运算符作为箭头。左侧是被赋值的变量名，
+    右侧是值或表达式。
 
 - Class: cmd_question
   Output: 把5+7的结果赋值给一个名为x的新变量，请键入x< - 
@@ -118,36 +118,36 @@
   Hint: 输入 c(z, 555, z). 不要创建一个新的变量。我们只是想查看结果。 
 
 - Class: cmd_question
-  Output: 'Numeric vectors can be used in arithmetic expressions. Type the following
-    to see what happens: z * 2 + 100.'
+  Output: '数值向量可以在算术表达式中使用。键入以下式子 
+    看看会发生什么: z * 2 + 100.'
   CorrectAnswer: z * 2 + 100
   AnswerTests: omnitest(correctExpr='z * 2 + 100')
-  Hint: Enter z * 2 + 100, without assigning the result to a variable. The `*` symbol
-    is used for multiplication and shares a key with the number 8 on many keyboards.
+  Hint: 输入 z * 2 + 100, 没有将结果赋给一个变量。在`*`符号 
+    用于乘法，许多键盘数字8的上面就是该运算符。 
 
 - Class: text
-  Output: First, R multiplied each of the three elements in z by 2. Then it added
-    100 to each element to get the result you see above.
+  Output: 首先，z中的三个元素各自乘以2然后每个元素加上
+    100。 
 
 - Class: text
-  Output: Other common arithmetic operators are `+`, `-`, `/`, and `^` (where x^2
-    means 'x squared'). To take the square root, use the sqrt() function and to take
-    the absolute value, use the abs() function.
+  Output: 其他常见的算术运算符 `+`, `-`, `/`, 和 `^` ( x^2
+    代表 'x 的平方'). 取平方根，使用 sqrt() 函数， 取 
+    绝对值，使用abs() 函数
 
 - Class: cmd_question
-  Output: Take the square root of z - 1 and assign it to a new variable called my_sqrt.
+  Output: 取 z - 1 的平方根，并将其赋给一个名为my_sqrt的新变量。
   CorrectAnswer: my_sqrt <- sqrt(z - 1)
   AnswerTests: omnitest(correctExpr='my_sqrt <- sqrt(z - 1)')
-  Hint: Assign the result of sqrt(z - 1) to a variable called my_sqrt.
+  Hint: my_sqrt <- sqrt(z - 1)
 
 - Class: mult_question
-  Output: Before we view the contents of the my_sqrt variable, what do you think it
-    contains?
-  CorrectAnswer: a vector of length 3
-  AnswerChoices: a vector of length 3; a single number (i.e a vector of length 1);
-    a vector of length 0 (i.e. an empty vector)
+  Output: 在我们查看my_sqrt变量的内容前，你觉得它 
+    包含了什么值？
+  CorrectAnswer: 长度为3的向量
+  AnswerChoices: 长度为3的向量;一个单一数值（即长度为1的向量）; 
+    长度为0的向量（即空向量） 
   AnswerTests: omnitest(correctVal='a vector of length 3')
-  Hint: 'Think about how R handled the other ''vectorized'' operations: element-by-element.'
+  Hint: '想想R如何将运算符作用于向量: 一个个元素分别处理'
 
 - Class: cmd_question
   Output: Print the contents of my_sqrt.
