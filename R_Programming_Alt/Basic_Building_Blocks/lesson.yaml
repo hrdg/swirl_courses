@@ -24,9 +24,9 @@
   Hint: Type 5 + 7 and press Enter.
 
 - Class: text
-  Output: R simply prints the result of 12 by default. However, R is a programming
-    language and often the reason we use a programming language as opposed to a calculator
-    is to automate some process or avoid unnecessary repetition.
+  Output: ř简单地打印12在默认情况下的结果。然而，R是一个编程 
+    语言，往往是因为我们使用的编程语言，而不是一个计算器 
+    是自动执行某些程序或避免不必要的重复。
 
 - Class: text
   Output: In this case, we may want to use our result from above in a second calculation.
