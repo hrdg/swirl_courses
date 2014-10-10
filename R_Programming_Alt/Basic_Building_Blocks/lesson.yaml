@@ -150,101 +150,101 @@
   Hint: '想想R如何将运算符作用于向量: 一个个元素分别处理'
 
 - Class: cmd_question
-  Output: Print the contents of my_sqrt.
+  Output: 打印my_sqrt的内容。 
   CorrectAnswer: my_sqrt
   AnswerTests: omnitest(correctExpr='my_sqrt')
-  Hint: Just type my_sqrt and press Enter to view its value.
+  Hint: 只要输入my_sqrt并按Enter键来查看它的值
 
 - Class: text
-  Output: As you may have guessed, R first subtracted 1 from each element of z, then
-    took the square root of each element. This leaves you with a vector of the same
-    length as the original vector z.
+  Output: 你可能已经猜到了，R减去z的每一个元素，然后 
+    取各元素的平方根。这使得向量长度不变。 
+
 
 - Class: cmd_question
-  Output: Now, create a new variable called my_div that gets the value of z divided
-    by my_sqrt.
+  Output: 现在，创建一个名为my_div新的变量，值为z除以 
+    my_sqrt得到的值。 
   CorrectAnswer: my_div <- z / my_sqrt
   AnswerTests: omnitest(correctExpr='my_div <- z / my_sqrt')
-  Hint: Enter my_div <- z / my_sqrt. The spaces on either side of the `/` sign are not
-    required, but can often improve readability by making code appear less cluttered.
-    In the end, it's personal preference.
+  Hint: 输入 my_div <- z / my_sqrt. 
+
+
 
 - Class: mult_question
-  Output: Which statement do you think is true?
-  CorrectAnswer: The first element of my_div is equal to the first element of z divided
-    by the first element of my_sqrt, and so on...
-  AnswerChoices: The first element of my_div is equal to the first element of z divided
-    by the first element of my_sqrt, and so on...; my_div is a single number (i.e a
-    vector of length 1); my_div is undefined
-  AnswerTests: omnitest(correctVal='The first element of my_div is equal to the first
-    element of z divided by the first element of my_sqrt, and so on...')
-  Hint: Think about how R handled the other 'vectorized' operations like `+` and `*`.
+  Output: 你觉得哪种说法正确？ 
+  CorrectAnswer: z的第一个元素除以my_sqrt的第一个元素 
+    得到my_div的第一个元素，依此类推...... 
+  AnswerChoices: z的第一个元素除以my_sqrt的第一个元素 
+    得到my_div的第一个元素，依此类推...... ; my_div是单个数字（即向量 
+    长度为1）的载体; my_div是不确定的 
+  AnswerTests: omnitest(correctVal='z的第一个元素除以my_sqrt的第一个元素 
+    得到my_div的第一个元素，依此类推...... ')
+  Hint: 想想R如何将运算符作用于向量， 一个个元素分别处理 如 + 和 *
 
 - Class: cmd_question
-  Output: Go ahead and print the contents of my_div.
+  Output: 继续打印my_div的内容。 
   CorrectAnswer: my_div
   AnswerTests: omnitest(correctExpr='my_div')
-  Hint: Type my_div and press Enter to see its contents.
+  Hint: 输入my_div，然后按Enter键查看其内容。
 
 - Class: text
-  Output: When given two vectors of the same length, R simply performs the specified
-    arithmetic operation (`+`, `-`, `*`, etc.) element-by-element. If the vectors
-    are of different lengths, R 'recycles' the shorter vector until it is the same
-    length as the longer vector.
+  Output: 当给定的相同长度的两个向量，R简单地逐个元素执行 
+    指定的算术运算（'+'，` - `，`*`等）。如果向量 
+    具有不同的长度，R循环短向量的元素直到它和长度较长 
+    的向量具有相同的长度。 
 
 - Class: text
-  Output: When we did z * 2 + 100 in our earlier example, z was a vector of length
-    3, but technically 2 and 100 are each vectors of length 1.
+  Output: 在 z * 2 + 100 的例子中, 向量z长度为
+    3, 2 和 100 的长度为1.
 
 - Class: text
-  Output: 'Behind the scenes, R is ''recycling'' the 2 to make a vector of 2s and
-    the 100 to make a vector of 100s. In other words, when you ask R to compute z
-    * 2 + 100, what it really computes is this: z * c(2, 2, 2) + c(100, 100, 100).'
+  Output: '在后台, R 循环 2 为 c(2, 2, 2) 而
+    100 为 c(100, 100, 100).  实际上后台是这样计算
+    z * 2 + 100 的: z * c(2, 2, 2) + c(100, 100, 100).'
 
 - Class: cmd_question
-  Output: To see another example of how this vector 'recycling' works, try adding
-    c(1, 2, 3, 4) and c(0, 10). Don't worry about saving the result in a new variable.
+  Output: 为了验证短向量循环元素的工作原理, 请将
+    c(1, 2, 3, 4) 加上 c(0, 10). 暂时不需要存储在新的向量内.
   CorrectAnswer: c(1, 2, 3, 4) + c(0, 10)
   AnswerTests: omnitest(correctExpr='c(1, 2, 3, 4) + c(0, 10)')
-  Hint: Enter c(1, 2, 3, 4) + c(0, 10) in the console to see how R adds two vectors
-    of different length. Don't assign the result to a variable.
+  Hint: 输入 c(1, 2, 3, 4) + c(0, 10) 在控制台中可看到R如何将两个
+    不同的长度向量相加.
 
 - Class: text
-  Output: If the length of the shorter vector does not divide evenly into the length
-    of the longer vector, R will still apply the 'recycling' method, but will throw
-    a warning to let you know something fishy might be going on.
+  Output: 如果长向量的长度不是短向量长度的整数倍 
+    R将仍然适用的“循环”元素的方法，但会抛出 
+    一个警告让你知道。 
 
 - Class: cmd_question
-  Output: Try c(1, 2, 3, 4) + c(0, 10, 100) for an example.
+  Output: 试试 c(1, 2, 3, 4) + c(0, 10, 100) 
   CorrectAnswer: c(1, 2, 3, 4) + c(0, 10, 100)
   AnswerTests: omnitest(correctExpr='c(1, 2, 3, 4) + c(0, 10, 100)')
-  Hint: Type c(1, 2, 3, 4) + c(0, 10, 100) to see how R handles adding two vectors,
-    when the shorter vector's length does not divide evenly into the longer vector's
-    length. Don't worry about assigning the result to a variable.
+  Hint: 输入 c(1, 2, 3, 4) + c(0, 10, 100) 
+
+
 
 - Class: text
-  Output: Before concluding this lesson, I'd like to show you a couple of time-saving tricks.
+  Output: 在结束这一课前，我想告诉你几个节省时间的技巧。
 
 - Class: text
-  Output: Earlier in the lesson, you computed z * 2 + 100. Let's pretend that you made a mistake and that you meant to add 1000 instead of 100. You could either re-type the expression, or...
+  Output: 在此前的学习中，你要计算 z * 2 + 1000. 不小心输入了 100 .你既可以重新键入表达式，或...
 
 - Class: cmd_question
-  Output: In many programming environments, the up arrow will cycle through previous commands. Try hitting the up arrow on your keyboard until you get to this command (z * 2 + 100), then change 100 to 1000 and hit Enter. If the up arrow doesn't work for you, just type the corrected command.
+  Output: 在许多编程环境中，向上箭头会遍历先前的命令。试着打你的键盘上的向上箭头，直到你到达这个命令  (z * 2 + 100),  把100 改为 1000 并按 Enter. 如果向上箭头不起作用，只需要输入正确的全部表达式。
   CorrectAnswer: z * 2 + 1000
   AnswerTests: omnitest(correctExpr='z * 2 + 1000')
-  Hint: If your environment does not support the up arrow feature, then just type the corrected command to move on.
+  Hint: 如果您的环境不支持向上箭头的功能，那么只需要输入校正命令继续前进。
 
 - Class: text
-  Output: Finally, let's pretend you'd like to view the contents of a variable that you created earlier, but you can't seem to remember if you named it my_div or myDiv. You could try both and see what works, or...
+  Output: 最后，假设你想查看您刚才创建的变量的内容，但你似乎无法记住它们的名称是my_div或myDiv。你可以尝试两个，或者...
 
 - Class: cmd_question
-  Output: You can type the first two letters of the variable name, then hit the Tab key (possibly more than once). Most programming environments will provide a list of variables that you've created that begin with 'my'. This is called auto-completion and can be quite handy when you have many variables in your workspace. Give it a try. (If auto-completion doesn't work for you, just type my_div and press Enter.)
+  Output: 您可以键入变量名的前两个字母，然后按Tab键（可能不止一次）。大多数编程环境提供了已经创建的变量列表。这就是所谓的自动完成功能，试试看吧。 （如果自动完成不为你工作，只需要输入my_div，然后按Enter。） 
   CorrectAnswer: my_div
   AnswerTests: omnitest(correctExpr='my_div')
-  Hint: If your programming environment doesn't support auto-completion, just type my_div and hit Enter to move on.
+  Hint: 如果自动完成不为你工作，只需要输入my_div，然后按Enter。
 
 - Class: mult_question
-  Output: Would you like to inform someone about your successful completion of this lesson?
+  Output: 你想告诉别人你顺利完成这一课呢？ 
   CorrectAnswer: NULL
   AnswerChoices: Yes; No
   AnswerTests: notify()
