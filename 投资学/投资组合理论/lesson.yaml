@@ -1,0 +1,12 @@
+- Class: meta
+  Course: 投资学
+  Lesson: 投资组合理论
+  Author: Your name here
+  Type: Standard
+  Organization: Your organization name here (optional)
+  Version: 2.2.16
+
+
+
+- Class: text
+  Output: put your text output here
